@@ -12,7 +12,7 @@ const seed_books = [
         sub_classification: "adult",
         status: "available",
         copies: 9,
-        image: "./images/ds_1.jpeg"
+        image: "/images/ds_1.jpeg"
     },
     {
         title: "Blowback",
@@ -25,7 +25,7 @@ const seed_books = [
         sub_classification: "adult",
         status: "available",
         copies: 8,
-        image: "./images/jp_1.jpeg"
+        image: "/images/jp_1.jpeg"
     },
     {
         title: "Desperation in Death",
@@ -38,7 +38,7 @@ const seed_books = [
         sub_classification: "adult",
         status: "available",
         copies: 7,
-        image: "./images/jdrobb_1.jpeg"
+        image: "/images/jdrobb_1.jpeg"
     },
     {
         title: "The Neuroscience of You: How every brain is different and how to understand yours",
@@ -51,7 +51,7 @@ const seed_books = [
         sub_classification: "adult",
         status: "available",
         copies: 7,
-        image: "./images/ns_1.jpeg"
+        image: "/images/ns_1.jpeg"
     },
     {
         title: "Like, Comment, Subscribe: Inside Youtube's Chaotic Rise to World Domination",
@@ -64,7 +64,7 @@ const seed_books = [
         sub_classification: "adult",
         status: "available",
         copies: 5,
-        image: "./images/yt.jpeg"
+        image: "/images/yt.jpeg"
     }
 ]
 
@@ -78,7 +78,7 @@ const seed_magazines = [
         general_note: "From BSA since 1911",
         status: "available",
         copies: 40,
-        image: "./images/magazine_gen.png"
+        image: "/images/magazine_gen.png"
     },
     {
         title: "Car and Driver",
@@ -89,7 +89,7 @@ const seed_magazines = [
         general_note: "From BSA since 1911",
         status: "available",
         copies: 90,
-        image: "./images/magazine_gen.png"
+        image: "/images/magazine_gen.png"
     }
 ]
 

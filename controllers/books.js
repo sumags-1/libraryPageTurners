@@ -10,11 +10,11 @@ NOTE: Remember that all routes on this page are prefixed with `localhost:3000/lo
 */
 
 // New Route (GET/Read): This route renders a form the user will use to POST (create) a new location
-// router.get('/new', (req, res) => {
-//     res.render('newLocation', {
-//         tabTitle: "Location Creation"
-//     })
-// })
+router.get('/new', (req, res) => {
+    res.render('newBook', {
+        tabTitle: "New Book"
+    })
+})
 
 // // Create Route (POST/Create): This route receives the POST request sent from the new route above, parses it into a location object, creates the location object as a document in the locations collection, and redirects the user back to the root/home page
 // router.post('/', (req, res) => {

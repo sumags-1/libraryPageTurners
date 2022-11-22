@@ -10,11 +10,11 @@ NOTE: Remember that all routes on this page are prefixed with `localhost:3000/en
 */
 
 // New Route (GET/Read): This route renders a form the user will use to POST (create) a new log entry
-// router.get('/new', (req, res) => {
-//     res.render('newEntry', {
-//         tabTitle: "Log Entry"
-//     })
-// })
+router.get('/new', (req, res) => {
+    res.render('newMagazine', {
+        tabTitle: "New Magazine"
+    })
+})
 
 // router.get('/:id', (req, res) => {
 //     db.LogEntry.findById(req.params.id, (err, entry) => {

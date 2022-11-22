@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page Turners</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+
 </head>
+
 <body>
-    <p>This is home</p>
+    <div class="top_librarian">
+        <h3>For Librarian Use</a></h3>
+        <ul>
+            <li>Add new <a href="/book/new">book</a> / <a href="/magazine/new">magazine</a></li>
+
+        </ul>
+    </div>
+
+    <div class="homepage" id="flex-container">
+        <h1>PAGE TURNERS</h1>
+        <p>Welcome to Page Turners.. we are a small library, run by volunteers, in the town of Mountain House, CA. In
+            this site, you can browse our currently available titles of books and magazines. Soon we hope to add a
+            Checkout function so you can virtually pick the book out and pick it up in 2 hours !!</p>
+        <ul>
+            <% for(let book of books) {%>
+                <li class="mn_pg">
+                    <%= book.title %>
+                        <br />
+                        <!-- <a href="/book/<%=book._id %>"> -->
+                        <img src=<%=book.image %> width="200"/>
+                        <!-- </a> -->
+                        <br />
+                        Author: <%= book.author %>
+                            <br />
+                </li>
+                <% } %>
+        </ul>
+        <ul>
+            <% for(let magazine of magazines) {%>
+                <li>
+                    <%= magazine.title %>
+                        <br />
+                        <!-- <a href="/magazine/<%=magazine._id %>"> -->
+                        <img src=<%=magazine.image %> width="200"/>
+                        <!-- </a> -->
+                        <br />
+                        Author: <%= magazine.classification %>
+                            <br />
+                </li>
+                <% } %>
+        </ul>
+
+    </div>
+
 </body>
+
 </html>
