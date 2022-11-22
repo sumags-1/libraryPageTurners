@@ -9,34 +9,46 @@ NOTE: Remember that all routes on this page are prefixed with `localhost:3000/lo
 ---------------------------------------------------------------------------------------
 */
 
-// New Route (GET/Read): This route renders a form the user will use to POST (create) a new location
+// New Route (get) : form the librarian will use add a new book
 router.get('/new', (req, res) => {
     res.render('newBook', {
         tabTitle: "New Book"
     })
 })
 
-// // Create Route (POST/Create): This route receives the POST request sent from the new route above, parses it into a location object, creates the location object as a document in the locations collection, and redirects the user back to the root/home page
-// router.post('/', (req, res) => {
-//     if (req.body.visited) {
-//         req.body.visited = true
-//     } else {
-//         req.body.visited = false
-//     }
-//     db.Location.create(req.body, (err, location) => {
-//         res.redirect('/')
-//     })
-// })
+// Create Route (post): adds the book and redirects to home page
+router.post('/', (req, res) => {
+    db.Book.create(req.body, (err, book) => {
+        res.redirect('/')
+    })
+})
 
-// // Show Route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
-// router.get('/:id', (req, res) => {
-//     db.Location.findById(req.params.id, (err, location) => {
-//         res.render("showLocation", {
-//             location: location,
-//             tabTitle: "Location: " + location.name
-//         })
-//     })
-// })
+// edit route
+router.put('/:id', (req, res) => {
+    db.Book.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, book) => {
+        res.redirect('/book/' + book._id)
+    })
+})
+
+router.get('/:id/edit', (req, res) => {
+    db.Book.findById(req.params.id, (err, book) => {
+        res.render("editBook", {
+            book: book
+        })
+    })
+})
+
+
+
+// Show book route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+router.get('/:id', (req, res) => {
+    db.Book.findById(req.params.id, (err, book) => {
+        res.render("showBook", {
+            book: book,
+            tabTitle: "Book: " + book.title
+        })
+    })
+})
 
 // export these routes so that they are acessible in `server.js`
 module.exports = router

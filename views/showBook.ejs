@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <div class="top_librarian">
+        <h3>For Librarian Use</a></h3>
+        <ul>
+            <li>Edit <a href="/book/<%=book._id%>/edit">book</a></li>
+
+        </ul>
+    </div>
+
+    <div class="flex-container">
+        <div id="location">
+            <img src=<%=book.image %> width="250"/>
+            <h2>
+                <%=book.title%>
+            </h2>
+            <p>
+                Author: <%= book.author %>
+            </p>
+            <p>
+                Classification: <%= book.classification.toUpperCase() %>
+            </p>
+            <p>
+                Copies: <%= book.copies %>
+            </p>
+        </div>
+    </div>
+
+    <h2><a href=<%='/' %>>Go back to home page</a></h2>
+</body>
+
+</html>

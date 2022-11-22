@@ -1,0 +1,37 @@
+<head>
+</head>
+
+<body>
+    <div class="flex-container">
+        <form action="/book/<%=book._id%>?_method=PUT" method="POST">
+            Title: <input type="text" name="title" placeholder="title" value="<%=book.title%>" required /><br>
+            Author: <input type="text" name="author" placeholder="author" value="<%=book.author%>" required /><br>
+            Published: <input type="number" name="published" value="<%=book.published%>" required /><br>
+            ISBN: <input type="text" name="isbn" value="<%=book.isbn%>" required /><br>
+            Abstract:<textarea name="abstract" rows="5" cols="15">value="<%=book.abstract%>"</textarea><br>
+            Language:<input type="text" name="language" value="<%=book.language%>"><br>
+            Classification: <select name="classification" value="<%=book.classification%>">
+                <option value="fiction">Fiction</option>
+                <option value="non_fiction">Non Fiction</option>
+            </select><br>
+            Sub Classification: <select name="sub_classification" value="<%=book.sub_classification%>">
+                <option value="adult">Adult</option>
+                <option value="kids">Kids</option>
+                <option value="teens">Teens</option>
+            </select><br>
+            Status: <select name="status" value="available" value="<%=book.status%>">
+                <option value="available">Available</option>
+                <option value="in_circulation">In Circulation</option>
+                <option value="unknown">Unknown</option>
+            </select><br>
+            Number of copies: <input type="number" value="<%=book.copies%>"><br>
+            <input type="text" name="image"
+                value="https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-570x570.jpg" /><br>
+            <button type="submit">Edit Book</button>
+        </form>
+        <h2><a href=<%='/' %>>Go back to home page</a></h2>
+
+    </div>
+</body>
+
+</html>

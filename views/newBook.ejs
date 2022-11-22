@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 
 <body>
-    <p>new book addition</p>
+    <div class="flex-container">
+        <form action="/book/" method="post">
+            Title: <input type="text" name="title" placeholder="title" required /><br>
+            Author: <input type="text" name="author" placeholder="author" required /><br>
+            Published: <input type="number" name="published" required /><br>
+            ISBN: <input type="text" name="isbn" required /><br>
+            Abstract:<textarea name="abstract" rows="5" cols="15"></textarea><br>
+            Language:<input type="text" name="language"><br>
+            Classification: <select name="classification">
+                <option value="fiction">Fiction</option>
+                <option value="non_fiction">Non Fiction</option>
+            </select><br>
+            Sub Classification: <select name="sub_classification">
+                <option value="adult">Adult</option>
+                <option value="kids">Kids</option>
+                <option value="teens">Teens</option>
+            </select><br>
+            Status: <select name="status" value="available">
+                <option value="available">Available</option>
+                <option value="in_circulation">In Circulation</option>
+                <option value="unknown">Unknown</option>
+            </select><br>
+            Number of copies: <input type="number"><br>
+            <input type="text" name="image"
+                value="https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-570x570.jpg" /><br>
+            <button type="submit">Add Book</button>
+        </form>
+        <h2><a href=<%='/' %>>Go back to home page</a></h2>
+
+    </div>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const methodOverride = require('method-override');
 // access models
 const db = require('./models')
 // access controllers
@@ -14,6 +15,8 @@ const magazineCtrl = require('./controllers/magazines')
 app.use(express.static('public'))
 // sets the view engine to EJS for our app 
 app.set('view engine', 'ejs')
+//set method override
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
