@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <div class="top_librarian">
+        <h3>For Librarian Use</a></h3>
+        <ul>
+            <li><button class="edit"><a href="/magazine/<%=magazine._id%>/edit">EDIT MAGAZINE</a></button></li>
+            <form action="/magazine/<%=magazine._id%>/?_method=DELETE" method="POST">
+                <li><button class="delete">DELETE</button></li>
+
+            </form>
+
+        </ul>
+    </div>
+
+    <div class="flex-container">
+        <div id="location">
+            <img src=<%=magazine.image %> width="250"/>
+            <h2>
+                <%=magazine.title%>
+            </h2>
+            <p>
+                Author: <%= magazine.author %>
+            </p>
+            <p>
+                Classification: <%= magazine.classification.toUpperCase() %>
+            </p>
+            <p>
+                Copies: <%= magazine.copies %>
+            </p>
+        </div>
+    </div>
+
+    <h2><a href=<%='/' %>>Go back to home page</a></h2>
+</body>
+
+</html>

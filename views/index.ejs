@@ -43,11 +43,11 @@
                 <li class="mn_pg">
                     <%= magazine.title %>
                         <br />
-                        <!-- <a href="/magazine/<%=magazine._id %>"> -->
-                        <img src=<%=magazine.image %> width="200"/>
-                        <!-- </a> -->
+                        <a href="/magazine/<%=magazine._id %>">
+                            <img src=<%=magazine.image %> width="200"/>
+                        </a>
                         <br />
-                        Author: <%= magazine.classification %>
+                        Frequency of Publication: <%= magazine.classification %>
                             <br />
                 </li>
                 <% } %>

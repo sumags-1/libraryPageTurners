@@ -1,15 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 
 <body>
-    new magazine addition
+    <div class="flex-container">
+        <form action="/magazine/" method="post">
+            Title: <input type="text" name="title" placeholder="title" required /><br>
+            Author: <input type="text" name="author" placeholder="author" /><br>
+            Publication Information: <input type="string" name="publication_information" /><br>
+            Language:<input type="text" name="language"><br>
+            Classification: <select name="classification">
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annual</option>
+            </select><br>
+            General Note:<textarea name="general_note" rows="5" cols="15"></textarea><br>
+            <br>
+            Status: <select name="status" value="available">
+                <option value="available">Available</option>
+                <option value="in_circulation">In Circulation</option>
+                <option value="unknown">Unknown</option>
+            </select><br>
+            Number of copies: <input type="number"><br>
+            <input type="text" name="image"
+                value="https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-570x570.jpg" /><br>
+            <button type="submit">Add Magazine</button>
+        </form>
+        <h2><a href=<%='/' %>>Go back to home page</a></h2>
+
+    </div>
 </body>
 
 </html>

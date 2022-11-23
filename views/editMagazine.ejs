@@ -1,0 +1,33 @@
+<head>
+</head>
+
+<body>
+    <div class="flex-container">
+        <form action="/magazine/<%=magazine._id%>?_method=PUT" method="POST">
+            Title: <input type="text" name="title" placeholder="title" value="<%=magazine.title%>" required /><br>
+            Author: <input type="text" name="author" placeholder="author" value="<%=magazine.author%>" /><br>
+            Publication Information: <input type="string" name="publication_information"
+                value="<%=magazine.publication_information%>" /><br>
+            Language:<input type="text" name="language" value="<%=magazine.language%>"><br>
+            Classification: <select name="classification" value="<%=magazine.classification%>">
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annual</option>
+            </select><br>
+            General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%>"</textarea><br>
+            <br>
+            Status: <select name="status" value="<%=magazine.status%>">
+                <option value="available">Available</option>
+                <option value="in_circulation">In Circulation</option>
+                <option value="unknown">Unknown</option>
+            </select><br>
+            Number of copies: <input type="number" value="<%=magazine.copies%>"><br>
+            <input type="text" name="image" value="/images/magazine_gen.png" /><br>
+            <button type="submit">Edit Magazine</button>
+        </form>
+        <h2><a href=<%='/' %>>Go back to home page</a></h2>
+
+    </div>
+</body>
+
+</html>

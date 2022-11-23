@@ -3,34 +3,54 @@ const db = require("../models")
 const express = require('express')
 const router = express.Router()
 
-/* 
----------------------------------------------------------------------------------------
-NOTE: Remember that all routes on this page are prefixed with `localhost:3000/entry`
----------------------------------------------------------------------------------------
-*/
 
-// New Route (GET/Read): This route renders a form the user will use to POST (create) a new log entry
+// New Route (get) : form the librarian will use add a new magazine
 router.get('/new', (req, res) => {
     res.render('newMagazine', {
         tabTitle: "New Magazine"
     })
 })
 
-// router.get('/:id', (req, res) => {
-//     db.LogEntry.findById(req.params.id, (err, entry) => {
-//         res.render("showEntry", {
-//             entry: entry,
-//             tabTitle: "Star Date " + entry.starDate
-//         })
-//     })
-// })
+// Create Route (post): adds the book and redirects to home page
+router.post('/', (req, res) => {
+    db.Magazine.create(req.body, (err, magazine) => {
+        res.redirect('/')
+    })
+})
 
-// // Create Route (POST/Create): This route receives the POST request sent from the new route above, parses it into a logEntry object, creates the logEntry object as a document in the logentries collection, and redirects the user to the show page for the new log entry that was created
-// router.post('/', (req, res) => {
-//     db.LogEntry.create(req.body, (err, entry) => {
-//         res.redirect('/entry/' + entry._id)
-//     })
-// })
+//delete route
+router.delete('/:id', (req, res) => {
+    db.Magazine.findByIdAndRemove(req.params.id, (err, magazine) => {
+        res.redirect('/')
+    })
+})
+
+// edit route
+router.put('/:id', (req, res) => {
+    db.Magazine.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, magazine) => {
+        res.redirect('/magazine/' + magazine._id)
+    })
+})
+
+router.get('/:id/edit', (req, res) => {
+    db.Magazine.findById(req.params.id, (err, magazine) => {
+        res.render("editMagazine", {
+            magazine: magazine
+        })
+    })
+})
+
+
+
+// Show book route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+router.get('/:id', (req, res) => {
+    db.Magazine.findById(req.params.id, (err, magazine) => {
+        res.render("showMagazine", {
+            magazine: magazine,
+            tabTitle: "Magazine: " + magazine.title
+        })
+    })
+})
 
 // export these routes so that they are acessible in `server.js`
-module.exports = router;
+module.exports = router
