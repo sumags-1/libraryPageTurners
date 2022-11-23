@@ -28,7 +28,7 @@ router.delete('/:id', (req, res) => {
 // edit route
 router.put('/:id', (req, res) => {
     db.Magazine.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, magazine) => {
-        res.redirect('/magazine/' + magazine._id)
+        res.redirect('/magazine/'+ magazine._id)
     })
 })
 

@@ -14,14 +14,14 @@
                 <option value="monthly">Monthly</option>
                 <option value="annual">Annual</option>
             </select><br>
-            General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%>"</textarea><br>
+            General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%></textarea><br>
             <br>
             Status: <select name="status" value="<%=magazine.status%>">
                 <option value="available">Available</option>
                 <option value="in_circulation">In Circulation</option>
                 <option value="unknown">Unknown</option>
             </select><br>
-            Number of copies: <input type="number" value="<%=magazine.copies%>"><br>
+            Number of copies: <input type="number" min=0 name="copies" value="<%=magazine.copies%>"><br>
             <input type="text" name="image" value="/images/magazine_gen.png" /><br>
             <button type="submit">Edit Magazine</button>
         </form>

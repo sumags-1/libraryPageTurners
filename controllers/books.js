@@ -34,6 +34,7 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     db.Book.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, book) => {
         res.redirect('/book/' + book._id)
+        //console.log(req.body)
     })
 })
 
