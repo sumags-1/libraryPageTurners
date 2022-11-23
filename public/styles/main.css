@@ -10,10 +10,10 @@ h1 {
 .top_librarian {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
 }
 
-ul {
+.hm_pg {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

@@ -10,7 +10,11 @@
     <div class="top_librarian">
         <h3>For Librarian Use</a></h3>
         <ul>
-            <li>Edit <a href="/book/<%=book._id%>/edit">book</a></li>
+            <li><button class="edit"><a href="/book/<%=book._id%>/edit">EDIT BOOK</a></button></li>
+            <form action="/book/<%=book._id%>/?_method=DELETE" method="POST">
+                <li><button class="delete">DELETE</button></li>
+            
+            </form>
 
         </ul>
     </div>

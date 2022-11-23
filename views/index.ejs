@@ -24,13 +24,13 @@
         <p>Welcome to Page Turners.. we are a small library, run by volunteers, in the town of Mountain House, CA. In
             this site, you can browse our currently available titles of books and magazines. Soon we hope to add a
             Checkout function so you can virtually pick the book out and pick it up in 2 hours !!</p>
-        <ul>
+        <ul class="hm_pg">
             <% for(let book of books) {%>
                 <li class="mn_pg">
                     <%= book.title %>
                         <br />
                         <a href="/book/<%=book._id %>">
-                        <img src=<%=book.image %> width="200"/>
+                            <img src=<%=book.image %> width="200"/>
                         </a>
                         <br />
                         Author: <%= book.author %>
@@ -38,9 +38,9 @@
                 </li>
                 <% } %>
         </ul>
-        <ul>
+        <ul class="hm_pg">
             <% for(let magazine of magazines) {%>
-                <li>
+                <li class="mn_pg">
                     <%= magazine.title %>
                         <br />
                         <!-- <a href="/magazine/<%=magazine._id %>"> -->

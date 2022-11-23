@@ -23,6 +23,13 @@ router.post('/', (req, res) => {
     })
 })
 
+//delete route
+router.delete('/:id', (req, res) => {
+    db.Book.findByIdAndRemove(req.params.id, (err, book) => {
+        res.redirect('/')
+    })
+})
+
 // edit route
 router.put('/:id', (req, res) => {
     db.Book.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, book) => {
