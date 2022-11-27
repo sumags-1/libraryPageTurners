@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Turners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -46,47 +49,64 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="top_librarian">
-        <h3>For Librarian Use</a></h3>
-        <ul>
-            <li>Add new <a href="/book/new">book</a> / <a href="/magazine/new">magazine</a></li>
-
-        </ul>
-    </div> -->
 
     <div class="homepage" id="flex-container">
         <h1>PAGE TURNERS</h1>
         <p>Welcome to Page Turners.. we are a small library, run by volunteers, in the town of Mountain House, CA. In
             this site, you can browse our currently available titles of books and magazines. Soon we hope to add a
             Checkout function so you can virtually pick the book out and pick it up in 2 hours !!</p>
-        <ul class="hm_pg">
+
+
+        <h3>Latest Books</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <% for(let book of books) {%>
-                <li class="mn_pg">
-                    <%= book.title %>
-                        <br />
+                <div class="col">
+
+                    <div class="card h-100 mn_pg">
                         <a href="/book/<%=book._id %>">
-                            <img src=<%=book.image %> width="200"/>
+                            <img src=<%=book.image %> class="card-img-top" width="100"/>
                         </a>
-                        <br />
-                        Author: <%= book.author %>
-                            <br />
-                </li>
+                        <div class="card-body">
+                            <h5 class="card-title">Title: <%= book.title %>
+                            </h5>
+                            <p class="card-text">Author: <%= book.author %>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+
+                </div>
                 <% } %>
-        </ul>
-        <ul class="hm_pg">
+        </div>
+
+        <br><br>
+        <h3>Latest Magazines</h3>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <% for(let magazine of magazines) {%>
-                <li class="mn_pg">
-                    <%= magazine.title %>
-                        <br />
+                <div class="col">
+
+                    <div class="card h-100 mn_pg">
                         <a href="/magazine/<%=magazine._id %>">
                             <img src=<%=magazine.image %> width="200"/>
                         </a>
-                        <br />
-                        Frequency of Publication: <%= magazine.classification %>
-                            <br />
-                </li>
+                        <div class="card-body">
+                            <h5 class="card-title">Title: <%= magazine.title %>
+                            </h5>
+                            <p class="card-text">Frequency of Publication: <%= magazine.classification %>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+
+                </div>
                 <% } %>
-        </ul>
+        </div>
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

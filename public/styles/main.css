@@ -5,6 +5,7 @@ body {
 
 h1 {
     text-align: center;
+    font-family: 'Prompt', sans-serif;
 }
 
 /* .top_librarian {
@@ -17,15 +18,21 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 10 15 10 15;
+    padding: 20px;
 }
 
 .mn_pg {
-    background-color: #D8CACA;
-    width: 400px;
-    height: 400px;
+    background-color: #d9d7bb;
+    width: 300px;
+    height: 250px;
     text-align: center;
     border-radius: 20px;
-    list-style: none;
+    margin: 10 15 10 15;
+    padding: 10px;
+}
+
+/* list-style: none; */
 }
 
 /* .show-items {
