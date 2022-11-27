@@ -8,6 +8,7 @@ const db = require('./models')
 // access controllers
 const bookCtrl = require('./controllers/books')
 const magazineCtrl = require('./controllers/magazines')
+//@import 'bootstrap';
 
 //Middleware
 

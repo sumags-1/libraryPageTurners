@@ -1,17 +1,17 @@
 body {
     background-color: rgb(231, 173, 209);
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 h1 {
     text-align: center;
 }
 
-.top_librarian {
+/* .top_librarian {
     position: fixed;
     top: 0;
     right: 0;
-}
+} */
 
 .hm_pg {
     display: flex;
