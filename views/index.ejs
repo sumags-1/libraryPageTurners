@@ -44,7 +44,7 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -57,8 +57,10 @@
             Checkout function so you can virtually pick the book out and pick it up in 2 hours !!</p>
 
 
+        <!-- Code from getbootstrap.com for cards -->
+
         <h3>Latest Books</h3>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mx-auto">
             <% for(let book of books) {%>
                 <div class="col">
 
@@ -73,7 +75,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last updated 5 mins ago</small>
                         </div>
                     </div>
 
@@ -84,7 +86,7 @@
         <br><br>
         <h3>Latest Magazines</h3>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mx-auto">
             <% for(let magazine of magazines) {%>
                 <div class="col">
 
@@ -99,7 +101,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last updated 5 mins ago</small>
                         </div>
                     </div>
 

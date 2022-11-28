@@ -1,11 +1,15 @@
 body {
     background-color: rgb(249, 245, 216);
-    /* margin-top: 60px; */
+
 }
 
 h1 {
     text-align: center;
     font-family: 'Prompt', sans-serif;
+}
+
+h3 {
+    margin-left: 20px;
 }
 
 /* .top_librarian {
@@ -32,18 +36,30 @@ h1 {
     padding: 10px;
 }
 
-/* list-style: none; */
-}
-
-/* .show-items {
-    border: solid 1px black;
-    margin: 0 auto;
-    width: 700px;
-    height: 600px;
-    text-align: left;
+p {
+    margin: 10 20;
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.new-book-container {
+    border: solid 1px black;
+    margin: 0 auto;
+    width: 50%;
+    /* height: 600px; */
+    text-align: left;
+    padding: 20px;
+}
+/*
 .buyprod {
     border: solid 1px black;
     margin: 0 auto;
