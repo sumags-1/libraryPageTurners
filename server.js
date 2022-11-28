@@ -1,7 +1,7 @@
 //Dependencies
 const express = require('express')
 const app = express()
-const port = 3000
+//const port = 3000
 const methodOverride = require('method-override');
 // access models
 require('dotenv').config()
@@ -11,6 +11,7 @@ const bookCtrl = require('./controllers/books')
 const magazineCtrl = require('./controllers/magazines')
 //@import 'bootstrap';
 
+const port = process.env.PORT
 
 //Middleware
 
