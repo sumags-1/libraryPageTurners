@@ -1,5 +1,7 @@
 // dependencies
+require('dotenv').config()
 const mongoose = require("mongoose");
+
 
 // connect to MongoDB via mongoose
 const connectionString = process.env.MONGODBURI
