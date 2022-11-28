@@ -93,7 +93,7 @@ const seed_magazines = [
     }
 ]
 
-db.Book.deleteMany({}, (err, locations) => {
+db.Book.deleteMany({}, (err, books) => {
     if (err) {
         console.log('Error occured in remove', err)
     } else {
