@@ -49,8 +49,8 @@
     </nav>
 
     <!-- Code from getbootstrap.com for card display -->
-    <div class="card show-book-container" style="width: 25rem;">
-        <img src=<%=book.image %> width="250" class="card-img-top" alt="...">
+    <div class="card show-book-container" style="width: 40rem;">
+        <img src=<%=book.image %> style="width:20rem;" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">
                 Title: <%=book.title%>
@@ -59,20 +59,20 @@
                 <%=book.abstract %>
             </p>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Author: <%= book.author %>
+        <ul class="list-group list-group-flush bgclr">
+            <li class="list-group-item bgclr">Author: <%= book.author %>
             </li>
-            <li class="list-group-item">Classification: <%= book.classification.toUpperCase() %>
+            <li class="list-group-item bgclr">Classification: <%= book.classification.toUpperCase() %>
             </li>
-            <li class="list-group-item">Copies: <%= book.copies %>
+            <li class="list-group-item bgclr">Copies: <%= book.copies %>
             </li>
         </ul>
         <div class="card-body">
             <!-- Button trigger modal - code example from getbootstrap.com-->
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">Checkout Book</button>
 
-            <button type="submit" class="btn btn-outline-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
+            <button type="submit" class="btn btn-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
 
         </div>
     </div>

@@ -32,7 +32,7 @@
                     <li class="nav-item navfontclr">
                         <a class="nav-link active navfontclr" aria-current="page" href="#">For Librarian Use:</a>
                     </li>
-                    <li class="nav-item dropdown">  
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navfontclr" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Actions
@@ -68,7 +68,7 @@
 
                     <div class="card h-100 mn_pg">
                         <a href="/book/<%=book._id %>">
-                            <img src=<%=book.image %> class="card-img-top" width="100"/>
+                            <img src=<%=book.image %> class="card-img-top" style="width:12rem;" />
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">Title: <%= book.title %>
@@ -94,7 +94,7 @@
 
                     <div class="card h-100 mn_pg">
                         <a href="/magazine/<%=magazine._id %>">
-                            <img src=<%=magazine.image %> width="200"/>
+                            <img src=<%=magazine.image %> style="width:12rem;" />
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">Title: <%= magazine.title %>

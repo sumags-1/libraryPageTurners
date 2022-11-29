@@ -6,6 +6,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Prompt', sans-serif;
+    padding: 10px;
 }
 
 h3 {
@@ -28,8 +29,8 @@ h3 {
 
 .mn_pg {
     background-color: #d9d7bb;
-    width: 300px;
-    height: 250px;
+    width: 18rem;
+    height: 18rem;
     text-align: center;
     border-radius: 20px;
     margin: 10 15 10 15;
@@ -38,12 +39,12 @@ h3 {
 
 p {
     margin: 10 20;
-    padding: 20px;
+    padding: 10px;
 }
 
 a {
     text-decoration: none;
-    color: gray;
+    color: white;
 }
 
 a:hover {
@@ -52,7 +53,7 @@ a:hover {
 }
 
 .new-book-container {
-    border: solid 1px black;
+    border: solid 1px gray;
     margin: 0 auto;
     width: 70%;
     /* height: 600px; */
@@ -61,12 +62,19 @@ a:hover {
 }
 
 .show-book-container {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     margin: 0 auto;
     width: 50%;
     /* height: 600px; */
     text-align: left;
     padding: 20px;
+    background-color: rgb(249, 245, 216);
+
+}
+
+.bgclr {
+    background-color: rgb(249, 245, 216);
+
 }
 
 .navcolor {

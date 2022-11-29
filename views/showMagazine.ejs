@@ -47,8 +47,8 @@
 
 
     <!-- Code from getbootstrap.com for card display -->
-    <div class="card show-book-container" style="width: 28rem;">
-        <img src=<%=magazine.image %> width="250" class="card-img-top" alt="...">
+    <div class="card show-book-container" style="width: 40rem;">
+        <img src=<%=magazine.image %> style="width:15rem;" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">
                 Title: <%=magazine.title%>
@@ -57,20 +57,20 @@
                 <%=magazine.general_note %>
             </p>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Author: <%= magazine.author %>
+        <ul class="list-group list-group-flush bgclr">
+            <li class="list-group-item bgclr">Author: <%= magazine.author %>
             </li>
-            <li class="list-group-item">Classification: <%= magazine.classification.toUpperCase() %>
+            <li class="list-group-item bgclr">Classification: <%= magazine.classification.toUpperCase() %>
             </li>
-            <li class="list-group-item">Copies: <%= magazine.copies %>
+            <li class="list-group-item bgclr">Copies: <%= magazine.copies %>
             </li>
         </ul>
         <div class="card-body">
             <!-- Button trigger modal - code example from getbootstrap.com-->
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">Checkout Magazine</button>
 
-            <button type="submit" class="btn btn-outline-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
+            <button type="submit" class="btn btn-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
 
         </div>
     </div>
