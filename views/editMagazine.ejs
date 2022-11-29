@@ -1,6 +1,7 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css" />
 
 </head>
 
@@ -119,33 +120,6 @@
         </form>
 
         <button type="submit" class="btn btn-outline-secondary"><a href=<%='/' %>>Cancel</a></button>
-
-
-
-
-
-        Title: <input type="text" name="title" placeholder="title" value="<%=magazine.title%>" required /><br>
-        Author: <input type="text" name="author" placeholder="author" value="<%=magazine.author%>" /><br>
-        Publication Information: <input type="string" name="publication_information"
-            value="<%=magazine.publication_information%>" /><br>
-        Language:<input type="text" name="language" value="<%=magazine.language%>"><br>
-        Classification: <select name="classification" value="<%=magazine.classification%>">
-            <option value="weekly">Weekly</option>
-            <option value="monthly">Monthly</option>
-            <option value="annual">Annual</option>
-        </select><br>
-        General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%></textarea><br>
-        <br>
-        Status: <select name="status" value="<%=magazine.status%>">
-            <option value="available">Available</option>
-            <option value="in_circulation">In Circulation</option>
-            <option value="unknown">Unknown</option>
-        </select><br>
-        Number of copies: <input type="number" min=0 name="copies" value="<%=magazine.copies%>"><br>
-        <input type="text" name="image" value="/images/magazine_gen.png" /><br>
-        <button type="submit">Edit Magazine</button>
-        </form>
-        <h2><a href=<%='/' %>>Go back to home page</a></h2>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

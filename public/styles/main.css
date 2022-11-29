@@ -54,11 +54,21 @@ a:hover {
 .new-book-container {
     border: solid 1px black;
     margin: 0 auto;
+    width: 70%;
+    /* height: 600px; */
+    text-align: left;
+    padding: 20px;
+}
+
+.show-book-container {
+    border: solid 1px black;
+    margin: 0 auto;
     width: 50%;
     /* height: 600px; */
     text-align: left;
     padding: 20px;
 }
+
 /*
 .buyprod {
     border: solid 1px black;
