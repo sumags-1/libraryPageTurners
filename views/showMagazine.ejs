@@ -47,7 +47,7 @@
 
 
     <!-- Code from getbootstrap.com for card display -->
-    <div class="card show-book-container" style="width: 25rem;">
+    <div class="card show-book-container" style="width: 28rem;">
         <img src=<%=magazine.image %> width="250" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">
@@ -66,9 +66,41 @@
             </li>
         </ul>
         <div class="card-body">
-            <a href=<%='/' %> class="card-link">Home Page</a>
+            <!-- Button trigger modal - code example from getbootstrap.com-->
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Checkout Magazine</button>
+
+            <button type="submit" class="btn btn-outline-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
+
         </div>
     </div>
+
+
+    <!-- Modal example from getbootstrap.com-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/magazine/<%=magazine._id%>?_method=PUT" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirm Checkout</h5>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        You are checking out <%=magazine.title %> which now has <input type="number" name="copies"
+                                value="<%=magazine.copies - 1%>"> copies
+                    </div>
+                    <div class="modal-footer">
+                        <form action="/magazine/<%=magazine._id%>?_method=PUT" method="POST">
+                            <button type="submit" class="btn btn-primary">Checkout Magazine</button>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
