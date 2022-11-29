@@ -69,9 +69,14 @@ a:hover {
     padding: 20px;
 }
 
+.navcolor {
+    background-color: #d9d7bb;
+    /* color: white; */
+}
 
-
-
+/* .navfontclr {
+    color: white;
+} */
 
 /*
 .buyprod {
