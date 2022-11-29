@@ -109,19 +109,19 @@ db.Book.deleteMany({}, (err, books) => {
     }
 })
 
-db.Magazine.deleteMany({}, (err, magazines) => {
-    if (err) {
-        console.log('Error occured in remove', err)
-    } else {
-        console.log('Removed all magazines')
+// db.Magazine.deleteMany({}, (err, magazines) => {
+//     if (err) {
+//         console.log('Error occured in remove', err)
+//     } else {
+//         console.log('Removed all magazines')
 
-        db.Magazine.insertMany(seed_magazines, (err, magazines) => {
-            if (err) {
-                console.log('Error occured in insertMany', err)
-            } else {
-                console.log('Created', magazines.length, "magazines")
-                process.exit()
-            }
-        })
-    }
-})
+//         db.Magazine.insertMany(seed_magazines, (err, magazines) => {
+//             if (err) {
+//                 console.log('Error occured in insertMany', err)
+//             } else {
+//                 console.log('Created', magazines.length, "magazines")
+//                 process.exit()
+//             }
+//         })
+//     }
+// })

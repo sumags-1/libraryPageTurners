@@ -1,36 +1,156 @@
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
 
 <body>
     <div class="flex-container">
         <form action="/magazine/<%=magazine._id%>?_method=PUT" method="POST">
-            Title: <input type="text" name="title" placeholder="title" value="<%=magazine.title%>" required /><br>
-            Author: <input type="text" name="author" placeholder="author" value="<%=magazine.author%>" /><br>
-            Publication Information: <input type="string" name="publication_information"
-                value="<%=magazine.publication_information%>" /><br>
-            Language:<input type="text" name="language" value="<%=magazine.language%>"><br>
-            Classification: <select name="classification" value="<%=magazine.classification%>">
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="annual">Annual</option>
-            </select><br>
-            General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%></textarea><br>
-            <br>
-            Status: <select name="status" value="<%=magazine.status%>">
-                <option value="available">Available</option>
-                <option value="in_circulation">In Circulation</option>
-                <option value="unknown">Unknown</option>
-            </select><br>
-            Number of copies: <input type="number" min=0 name="copies" value="<%=magazine.copies%>"><br>
-            <input type="text" name="image" value="/images/magazine_gen.png" /><br>
-            <button type="submit">Edit Magazine</button>
+
+            <div class="new-book-container">
+                <h2>Edit Magazine Details</h2>
+
+                <!-- Code from getbootstrap.com for forms -->
+                <div class="row mb-3">
+                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="title" name="title" value="<%=magazine.title%>"
+                            required />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="author" class="col-sm-2 col-form-label">Author</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="author" name="author"
+                            value="<%=magazine.author%>" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="publication_information" class="col-sm-2 col-form-label">Publication Information</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="publication_information"
+                            name="publication_information" value="<%=magazine.publication_information%>" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="language" class="col-sm-2 col-form-label">Language</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="language" name="language"
+                            value="<%=magazine.language%>" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="classification" class="col-sm-2 col-form-label">Classification</label>
+                    <div class="col-sm-6">
+                        <select class="form-select" name="classification" id="classification"
+                            value="<%=magazine.classification%>">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="annual">Annual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="general_note" class="col-sm-2 col-form-label">General Note</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" name="general_note" id="general_note" rows="5"
+                            cols="15"><%=magazine.general_note%></textarea>
+                    </div>
+                </div>
+
+                <fieldset class="row mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">Status:</legend>
+                    <div class="col-sm-6">
+                        <div class="form-check">
+                            <input name="status" class="form-check-input" type="radio" name="gridRadios"
+                                id="gridRadios1" value="available" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Available
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input name="status" class="form-check-input" type="radio" name="gridRadios"
+                                id="gridRadios2" value="in_circulation">
+                            <label class="form-check-label" for="gridRadios2">
+                                In Circulation
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input name="status" class="form-check-input" type="radio" name="gridRadios"
+                                id="gridRadios3" value="unknown">
+                            <label class="form-check-label" for="gridRadios3">
+                                Unknown
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="row mb-3">
+                    <label for="copies" class="col-sm-2 col-form-label">Number of Copies: </label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="copies" name="copies"
+                            value="<%=magazine.copies%>" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="image" class="col-sm-2 col-form-label">Magazine Image</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="image" name="image"
+                            value="/images/magazine_gen.png" />
+                    </div>
+                </div>
+
+                <!-- <div class="row mb-3">
+                    <label for="formFile" class="col-sm-2 form-label">Magazine Image: </label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="file" id="formFile" name="image">
+                    </div>
+                </div>-->
+
+                <button type="submit" class="btn btn-outline-secondary">Edit Magazine</button>
+
+        </form>
+
+        <button type="submit" class="btn btn-outline-secondary"><a href=<%='/' %>>Cancel</a></button>
+
+
+
+
+
+        Title: <input type="text" name="title" placeholder="title" value="<%=magazine.title%>" required /><br>
+        Author: <input type="text" name="author" placeholder="author" value="<%=magazine.author%>" /><br>
+        Publication Information: <input type="string" name="publication_information"
+            value="<%=magazine.publication_information%>" /><br>
+        Language:<input type="text" name="language" value="<%=magazine.language%>"><br>
+        Classification: <select name="classification" value="<%=magazine.classification%>">
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="annual">Annual</option>
+        </select><br>
+        General Note:<textarea name="general_note" rows="5" cols="15"><%=magazine.general_note%></textarea><br>
+        <br>
+        Status: <select name="status" value="<%=magazine.status%>">
+            <option value="available">Available</option>
+            <option value="in_circulation">In Circulation</option>
+            <option value="unknown">Unknown</option>
+        </select><br>
+        Number of copies: <input type="number" min=0 name="copies" value="<%=magazine.copies%>"><br>
+        <input type="text" name="image" value="/images/magazine_gen.png" /><br>
+        <button type="submit">Edit Magazine</button>
         </form>
         <h2><a href=<%='/' %>>Go back to home page</a></h2>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
 </body>
 

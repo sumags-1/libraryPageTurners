@@ -31,10 +31,17 @@ router.delete('/:id', (req, res) => {
 })
 
 // edit route
+router.get('/:id/edit', (req, res) => {
+    db.Book.findById(req.params.id, (err, book) => {
+        res.render("editBook", {
+            book: book
+        })
+    })
+})
+
 router.put('/:id', (req, res) => {
     db.Book.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, book) => {
         res.redirect('/book/' + book._id)
-        //console.log(req.body)
     })
 })
 

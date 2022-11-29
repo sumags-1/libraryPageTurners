@@ -13,7 +13,7 @@ const magazineSchema = new Schema(
         general_note: { type: String },
         status: { type: String, enum: ['available', 'in_circulation', 'unknown'], default: 'available' },
         copies: { type: Number },
-        image: { type: String, default: 'https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-570x570.jpg' }
+        image: { type: String, default: '/images/magazine_gen.png' }
     }
 )
 
