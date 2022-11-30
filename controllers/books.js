@@ -3,11 +3,6 @@ const db = require("../models")
 const express = require('express')
 const router = express.Router()
 
-/* 
----------------------------------------------------------------------------------------
-NOTE: Remember that all routes on this page are prefixed with `localhost:3000/location`
----------------------------------------------------------------------------------------
-*/
 
 // New Route (get) : form the librarian will use add a new book
 router.get('/new', (req, res) => {
@@ -55,7 +50,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-// Show book route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+// Show book route (GET/Read)
 router.get('/:id', (req, res) => {
     db.Book.findById(req.params.id, (err, book) => {
         res.render("showBook", {

@@ -1,9 +1,9 @@
+<!DOCTYPE html>
+<html>
+
 <head>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/main.css" />
-
+    <%- include ('./partials/head.ejs') %>
 </head>
 
 <body>
@@ -11,7 +11,7 @@
         <div class="new-book-container">
             <h2>New Magazine Details</h2>
 
-            <!-- Code from getbootstrap.com for forms -->
+            <!-- Example Code from getbootstrap.com for forms -->
             <div class="row mb-3">
                 <label for="title" class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-6">
@@ -101,13 +101,6 @@
                 </div>
             </div>
 
-            <!-- <div class="row mb-3">
-                <label for="formFile" class="col-sm-2 form-label">Magazine Image: </label>
-                <div class="col-sm-6">
-                    <input class="form-control" type="file" id="formFile" name="image">
-                </div>
-            </div> -->
-
             <button type="submit" class="btn btn-secondary">Add Magazine</button>
 
     </form>
@@ -115,15 +108,6 @@
     <button type="submit" class="btn btn-secondary"><a href=<%='/' %>>Cancel</a></button>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
-
-<body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>

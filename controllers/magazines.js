@@ -11,7 +11,7 @@ router.get('/new', (req, res) => {
     })
 })
 
-// Create Route (post): adds the book and redirects to home page
+// Create Route (post): adds the magazine and redirects to home page
 router.post('/', (req, res) => {
     db.Magazine.create(req.body, (err, magazine) => {
         res.redirect('/')
@@ -42,7 +42,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-// Show book route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+// Show book route (GET/Read)
 router.get('/:id', (req, res) => {
     db.Magazine.findById(req.params.id, (err, magazine) => {
         res.render("showMagazine", {

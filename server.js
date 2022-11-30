@@ -9,7 +9,6 @@ const db = require('./models')
 // access controllers
 const bookCtrl = require('./controllers/books')
 const magazineCtrl = require('./controllers/magazines')
-//@import 'bootstrap';
 
 const port = process.env.PORT
 
@@ -24,7 +23,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-    console.log('I run for all routes');
+    // console.log('I run for all routes');
     next();
 });
 

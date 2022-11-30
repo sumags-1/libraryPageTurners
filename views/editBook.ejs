@@ -1,8 +1,8 @@
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/main.css" />
+<!DOCTYPE html>
+<html>
 
+<head>
+    <%- include ('./partials/head.ejs') %>
 </head>
 
 <body>
@@ -11,7 +11,7 @@
         <div class="new-book-container">
             <h2>Edit Book Details</h2>
 
-            <!-- Code from getbootstrap.com for forms -->
+            <!-- Example Code from getbootstrap.com for forms -->
             <div class="row mb-3">
                 <label for="title" class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-6">
@@ -124,13 +124,6 @@
                     <input type="text" class="form-control" id="image" name="image" value="/images/no_img.png" />
                 </div>
             </div>
-
-            <!-- <div class="row mb-3">
-                <label for="formFile" class="col-sm-2 form-label">Book Image: </label>
-                <div class="col-sm-6">
-                    <input class="form-control" type="file" id="formFile" name="image" value="/images/+"no_img.png>
-                </div>
-            </div> -->
 
             <button type="submit" class="btn btn-secondary">Edit Book</button>
 

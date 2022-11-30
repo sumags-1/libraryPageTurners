@@ -2,24 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Turners</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/styles/main.css" />
-
+    <%- include ('./partials/head.ejs') %>
 </head>
 
 <body>
-    <!-- Code from getbootstrap.com for navbar component -->
+    <!-- Example Code from getbootstrap.com for navbar component -->
     <nav class="navbar navbar-expand-lg navcolor">
-        <!-- navbar-light bg-light -->
         <div class="container-fluid">
             <a class="navbar-brand navfontclr" href=<%='/' %>><b>PAGE TURNERS</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -43,10 +31,6 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary navfontclr" type="submit">Search</button>
-                </form> -->
             </div>
         </div>
     </nav>
@@ -59,7 +43,7 @@
             hours !!</p>
 
 
-        <!-- Code from getbootstrap.com for cards -->
+        <!-- Example Code from getbootstrap.com for cards -->
 
         <h3>Latest Books</h3>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mx-auto">

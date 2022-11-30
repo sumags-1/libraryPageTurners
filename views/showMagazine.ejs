@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/styles/main.css" />
+    <%- include ('./partials/head.ejs') %>
 </head>
 
 <body>
-    <!-- Code from getbootstrap.com for navbar component -->
+    <!-- Example Code from getbootstrap.com for navbar component -->
     <nav class="navbar navbar-expand-lg navcolor">
         <div class="container-fluid">
             <a class="navbar-brand" href=<%='/' %>><b>PAGE TURNERS</b></a>
@@ -37,10 +34,6 @@
                 </ul>
                 </li>
                 </ul>
-                <!-- <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
-                </form> -->
             </div>
         </div>
     </nav>
@@ -62,15 +55,19 @@
             </li>
             <li class="list-group-item bgclr">Classification: <%= magazine.classification.toUpperCase() %>
             </li>
-            <li class="list-group-item bgclr">Copies: <%= magazine.copies %>
-            </li>
+            <% if(magazine.copies==0) {%>
+                <li class="list-group-item bgclr">Copies: Not Available for Checkout at this time, Please check back
+                    later <br> <br>
+                    <%}else{%>
+                <li class="list-group-item bgclr">Copies: <%= magazine.copies %>
+                </li>
         </ul>
         <div class="card-body">
             <!-- Button trigger modal - code example from getbootstrap.com-->
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">Checkout Magazine</button>
-
-            <button type="submit" class="btn btn-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
+            <%}%>
+                <button type="submit" class="btn btn-secondary"><a href=<%='/' %>>Back to Home Page</a></button>
 
         </div>
     </div>
