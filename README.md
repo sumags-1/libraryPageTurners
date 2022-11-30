@@ -119,3 +119,8 @@ BOOTSTRAP !! Love this framework.. it made CSS much easier to manage. It was qui
 ### Hurdles
 1. Not so much a hurdle but learning Bootstrap and then applying the same to the site and pages was initially a challenge and I did run into a few bugs with my edit and delete routes. However I was able to resolve the same by taking out the browse file component and adding a text component instead and setting defaults for book and magazine images.
 2. Due to lack of time, I was not able to implement the Search function. I will attempt to add this at a later stage as it is something I really wanted on the site.
+
+
+### References
+1. Bootstrap code examples from getbootstrap.com 
+2. Library UI ideas from Stockton Public Library
