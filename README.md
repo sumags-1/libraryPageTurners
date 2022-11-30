@@ -81,7 +81,7 @@ Server.JS - starting point
 
 
 
-### Installation:
+### Installation
 
 The site is hosted on Railway app with the database in MongoDB Atlas and can be accessed at the following URL: https://librarypageturners-production.up.railway.app/
 
@@ -111,3 +111,11 @@ The following were my stretch goals :
 - Carousel on home page to show latest titles added: I did not add this as my design idea changed after implementing Bootstrap
 - Search bar to search for specific book or magazine : Did not add due to lack of time
 
+
+### Learnings
+BOOTSTRAP !! Love this framework.. it made CSS much easier to manage. It was quite the learning curve but once I got the hang of it, it was quick to implement.
+
+
+### Hurdles
+1. Not so much a hurdle but learning Bootstrap and then applying the same to the site and pages was initially a challenge and I did run into a few bugs with my edit and delete routes. However I was able to resolve the same by taking out the browse file component and adding a text component instead and setting defaults for book and magazine images.
+2. Due to lack of time, I was not able to implement the Search function. I will attempt to add this at a later stage as it is something I really wanted on the site.
