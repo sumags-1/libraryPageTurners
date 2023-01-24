@@ -1,6 +1,7 @@
 //Dependencies
 const express = require('express')
 const app = express()
+const path = require("path")
 //const port = 3000
 const methodOverride = require('method-override');
 // access models
@@ -21,6 +22,8 @@ app.set('view engine', 'ejs')
 //set method override
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(path.dirname(__dirname), "build")))
+
 
 app.use((req, res, next) => {
     // console.log('I run for all routes');
@@ -47,6 +50,9 @@ app.get('/', (req, res) => {
 
 app.use('/book', bookCtrl)
 app.use('/magazine', magazineCtrl)
+app.get("*", (req, res) => {
+    res.sendFile(path.join(path.dirname(__dirname), "views", "build", "index.ejs"));
+});
 
 //Listener
 app.listen(port, () => {
