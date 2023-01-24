@@ -22,7 +22,7 @@ app.set('view engine', 'ejs')
 //set method override
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(path.dirname(__dirname), "build")))
+// app.use(express.static(path.join(path.dirname(__dirname), "build")))
 
 
 app.use((req, res, next) => {
@@ -50,9 +50,9 @@ app.get('/', (req, res) => {
 
 app.use('/book', bookCtrl)
 app.use('/magazine', magazineCtrl)
-app.get("*", (req, res) => {
-    res.sendFile(path.join(path.dirname(__dirname), "views", "build", "index.ejs"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(path.dirname(__dirname), "views", "build", "index.ejs"));
+// });
 
 //Listener
 app.listen(port, () => {
